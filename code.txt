@@ -1,1 +1,1 @@
-This will be the first commit in my stack. It will not change.
+This will be the second commit in my stack initially, but it might become the third.
