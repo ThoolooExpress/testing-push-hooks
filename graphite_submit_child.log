@@ -1,0 +1,645 @@
+/usr/bin/node
+/usr/bin/gt
+ss
+CLI version: 1.6.4
+2025-06-28T16:00:45.003Z: Spawning getRepoPaths (70322): git rev-parse --path-format=absolute --show-toplevel --git-common-dir --git-dir
+2025-06-28T16:00:45.008Z: Spawning getGitVersion (70323): git --version
+2025-06-28T16:00:45.009Z: Finished getRepoPaths (70322): git rev-parse --path-format=absolute --show-toplevel --git-common-dir --git-dir
+{
+  "code": 0,
+  "signal": null,
+  "stdout": "/home/thoolooexpress/Repos/testing-push-hooks\n/home/thoolooexpress/Repos/testing-push-hooks/.git\n/home/thoolooexpress/Repos/testing-push-hooks/.git\n",
+  "stderr": ""
+}
+2025-06-28T16:00:45.010Z: Finished getGitVersion (70323): git --version
+{
+  "code": 0,
+  "signal": null,
+  "stdout": "git version 2.49.0\n",
+  "stderr": ""
+}
+2025-06-28T16:00:45.019Z: Spawning getRepoPaths (70324): git rev-parse --path-format=absolute --show-toplevel --git-common-dir --git-dir
+2025-06-28T16:00:45.023Z: Spawning getGitVersion (70325): git --version
+2025-06-28T16:00:45.024Z: Finished getRepoPaths (70324): git rev-parse --path-format=absolute --show-toplevel --git-common-dir --git-dir
+{
+  "code": 0,
+  "signal": null,
+  "stdout": "/home/thoolooexpress/Repos/testing-push-hooks\n/home/thoolooexpress/Repos/testing-push-hooks/.git\n/home/thoolooexpress/Repos/testing-push-hooks/.git\n",
+  "stderr": ""
+}
+2025-06-28T16:00:45.024Z: Finished getGitVersion (70325): git --version
+{
+  "code": 0,
+  "signal": null,
+  "stdout": "git version 2.49.0\n",
+  "stderr": ""
+}
+2025-06-28T16:00:45.025Z: Reading JSON for /home/thoolooexpress/Repos/testing-push-hooks/.git/.graphite_cache_persist
+2025-06-28T16:00:45.025Z: Successfully parsed JSON at /home/thoolooexpress/Repos/testing-push-hooks/.git/.graphite_cache_persist
+2025-06-28T16:00:45.025Z: Reading cache seed data...
+2025-06-28T16:00:45.029Z: Spawning getBranchNamesAndRevisions (70326): git for-each-ref --format=%(refname:short):%(objectname) --sort=-committerdate refs/heads/
+2025-06-28T16:00:45.034Z: Spawning getShaForEachRefWithPrefix (70327): git for-each-ref --format=%(refname):%(objectname) refs/branch-metadata/
+2025-06-28T16:00:45.034Z: Finished getBranchNamesAndRevisions (70326): git for-each-ref --format=%(refname:short):%(objectname) --sort=-committerdate refs/heads/
+{
+  "code": 0,
+  "signal": null,
+  "stdout": "06-28-yet_again_more_changes:6c204820bb02a5d0d2cc5b10047f9d0db821cea8\n06-28-some_changes:712e09c56e2e333a88b68cfcf912365decb3961d\nmaster:fb5f9e6a41e278efe3749ebc7d390dfa7860178e\n06-28-even_more_changes:69c0550081f8ff93f1ccc3555a8ed3af2c71ac80\n06-15-part_2:4065526106f82e73213245cb8ce60dd48096ff33\n06-15-part_1:58bfb687c0a047c0899ba0fa2f796d079d42f551\n",
+  "stderr": ""
+}
+2025-06-28T16:00:45.034Z: Finished getShaForEachRefWithPrefix (70327): git for-each-ref --format=%(refname):%(objectname) refs/branch-metadata/
+{
+  "code": 0,
+  "signal": null,
+  "stdout": "refs/branch-metadata/06-15-part_1:9475366adc4a15b1820262cdb77a6d7c1cd679f5\nrefs/branch-metadata/06-15-part_2:2b0a9ad586ed408d83db6c8b6d0046e2fa1779fc\nrefs/branch-metadata/06-28-even_more_changes:a0efd946404e211b24bc6bbcca2edaefd2b3f3a8\nrefs/branch-metadata/06-28-some_changes:c619a05d99c292debb398658fcbd3e6b82c0331f\nrefs/branch-metadata/06-28-yet_again_more_changes:c60e30d82066727bbb9afde8f138dc219967fae3\n",
+  "stderr": ""
+}
+2025-06-28T16:00:45.035Z: Loading cache...
+2025-06-28T16:00:45.039Z: Spawning getCurrentBranchName (70328): git branch --show-current
+2025-06-28T16:00:45.039Z: Finished getCurrentBranchName (70328): git branch --show-current
+{
+  "code": 0,
+  "signal": null,
+  "stdout": "06-28-yet_again_more_changes\n",
+  "stderr": ""
+}
+2025-06-28T16:00:45.040Z: Existing PR infos: [
+  {
+    "number": 6,
+    "headRefName": "06-15-part_1",
+    "state": "CLOSED"
+  },
+  {
+    "number": 7,
+    "headRefName": "06-15-part_2",
+    "state": "CLOSED"
+  },
+  {
+    "number": 8,
+    "headRefName": "06-28-some_changes",
+    "state": "OPEN"
+  }
+]
+2025-06-28T16:00:45.042Z: Finished composing engine.
+2025-06-28T16:00:45.042Z: Running command submit {
+  "_": [
+    "submit"
+  ],
+  "stack": true,
+  "s": true,
+  "help": false,
+  "allCommands": false,
+  "all-commands": false,
+  "debug": false,
+  "interactive": true,
+  "verify": true,
+  "quiet": false,
+  "q": false,
+  "draft": false,
+  "d": false,
+  "publish": false,
+  "p": false,
+  "restack": false,
+  "no-edit": false,
+  "n": false,
+  "noEdit": false,
+  "ai": false,
+  "no-ai": false,
+  "noAi": false,
+  "dry-run": false,
+  "dryRun": false,
+  "confirm": false,
+  "c": false,
+  "update-only": false,
+  "u": false,
+  "updateOnly": false,
+  "force": false,
+  "f": false,
+  "always": false,
+  "merge-when-ready": false,
+  "m": false,
+  "mergeWhenReady": false,
+  "rerequest-review": false,
+  "rerequestReview": false,
+  "view": false,
+  "v": false,
+  "$0": "gt"
+}
+2025-06-28T16:00:45.042Z: CLI version: 1.6.4
+2025-06-28T16:00:45.042Z: Fetching update prompt...
+2025-06-28T16:00:45.042Z: Forking: background upgrade-prompt...
+2025-06-28T16:00:45.047Z: Forked and unrefed: background upgrade-prompt
+2025-06-28T16:00:45.047Z: Cleaning up old debug logs...
+2025-06-28T16:00:45.047Z: Forking: background cleanup-debug-logs...
+2025-06-28T16:00:45.051Z: Forked and unrefed: background cleanup-debug-logs
+2025-06-28T16:00:45.051Z: Forking: background post-traces...
+2025-06-28T16:00:45.056Z: Forked: background post-traces
+2025-06-28T16:00:45.061Z: Spawning getRemoteUrl (70343): git remote get-url origin --push
+2025-06-28T16:00:45.062Z: Finished getRemoteUrl (70343): git remote get-url origin --push
+{
+  "code": 0,
+  "signal": null,
+  "stdout": "git@github.com:ThoolooExpress/testing-push-hooks.git\n",
+  "stderr": ""
+}
+2025-06-28T16:00:45.065Z: Spawning inferRepoGitHubInfo (70350): git config --get user.email
+2025-06-28T16:00:45.065Z: Finished inferRepoGitHubInfo (70350): git config --get user.email
+{
+  "code": 0,
+  "signal": null,
+  "stdout": "morrill@thoolooexpress.com\n",
+  "stderr": ""
+}
+2025-06-28T16:00:45.066Z: Running handler...
+2025-06-28T16:00:45.069Z: Spawning getRemoteUrl (70352): git remote get-url origin --push
+2025-06-28T16:00:45.073Z: Spawning getRemoteUrl (70353): git remote get-url origin --push
+2025-06-28T16:00:45.074Z: Finished getRemoteUrl (70352): git remote get-url origin --push
+{
+  "code": 0,
+  "signal": null,
+  "stdout": "git@github.com:ThoolooExpress/testing-push-hooks.git\n",
+  "stderr": ""
+}
+2025-06-28T16:00:45.074Z: Finished getRemoteUrl (70353): git remote get-url origin --push
+{
+  "code": 0,
+  "signal": null,
+  "stdout": "git@github.com:ThoolooExpress/testing-push-hooks.git\n",
+  "stderr": ""
+}
+2025-06-28T16:00:45.075Z: Requesting: {
+  "apiServer": "https://api.graphite.dev/v1",
+  "route": {
+    "method": "GET",
+    "url": "/graphite/cli/is-repo-synced",
+    "queryParams": {},
+    "response": {}
+  },
+  "params": {},
+  "queryParams": {
+    "repoName": "testing-push-hooks",
+    "repoOwner": "ThoolooExpress"
+  }
+}
+2025-06-28T16:00:45.431Z: Debug headers: {
+  "x-graphite-request-id": "6650513f-3cdc-49c0-af92-95db12f13780"
+}
+2025-06-28T16:00:45.431Z: Result: {
+  "result": {
+    "result": {
+      "status": "SYNCED"
+    },
+    "_response": {}
+  }
+}
+[94m🥞 Validating that this Graphite stack is ready to submit...[39m
+2025-06-28T16:00:45.441Z: Spawning getRemoteUrl (70355): git remote get-url origin --push
+2025-06-28T16:00:45.446Z: Spawning getRemoteUrl (70361): git remote get-url origin --push
+2025-06-28T16:00:45.447Z: Finished getRemoteUrl (70361): git remote get-url origin --push
+{
+  "code": 0,
+  "signal": null,
+  "stdout": "git@github.com:ThoolooExpress/testing-push-hooks.git\n",
+  "stderr": ""
+}
+2025-06-28T16:00:45.448Z: Finished getRemoteUrl (70355): git remote get-url origin --push
+{
+  "code": 0,
+  "signal": null,
+  "stdout": "git@github.com:ThoolooExpress/testing-push-hooks.git\n",
+  "stderr": ""
+}
+2025-06-28T16:00:45.448Z: Requesting: {
+  "apiServer": "https://api.graphite.dev/v1",
+  "route": {
+    "method": "POST",
+    "url": "/graphite/cli/pull-request-info",
+    "params": {},
+    "response": {}
+  },
+  "params": {
+    "repoOwner": "ThoolooExpress",
+    "repoName": "testing-push-hooks",
+    "prNumbers": [
+      8
+    ],
+    "prHeadRefNames": [
+      "06-28-yet_again_more_changes"
+    ],
+    "trunkBranchNames": [
+      "master"
+    ],
+    "consistent": true,
+    "callsite": "validateAndGetBranchesToSubmit"
+  }
+}
+2025-06-28T16:00:46.674Z: Debug headers: {
+  "x-graphite-request-id": "6942bdb0-4d75-406a-9b33-e7f482bdb17f"
+}
+2025-06-28T16:00:46.674Z: Result: {
+  "result": {
+    "result": {
+      "status": "ok",
+      "prs": [
+        {
+          "prNumber": 8,
+          "title": "Some changes",
+          "body": "",
+          "state": "OPEN",
+          "reviewDecision": "REVIEW_REQUIRED",
+          "url": "https://app.graphite.dev/github/pr/ThoolooExpress/testing-push-hooks/8",
+          "headRefName": "06-28-some_changes",
+          "baseRefName": "master",
+          "isBaseRefGraphiteBase": false,
+          "isDraft": true,
+          "versions": [
+            {
+              "headSha": "712e09c56e2e333a88b68cfcf912365decb3961d",
+              "baseSha": "fb5f9e6a41e278efe3749ebc7d390dfa7860178e",
+              "baseName": "master",
+              "createdAt": "2025-06-28T16:00:03.989Z",
+              "authorGithubHandle": "ThoolooExpress",
+              "isGraphiteGenerated": true
+            }
+          ],
+          "cliTrunk": "master"
+        }
+      ]
+    },
+    "_response": {}
+  }
+}
+2025-06-28T16:00:46.680Z: Spawning fetchBranch (70379): git fetch --no-write-fetch-head --progress --no-tags -f origin refs/heads/06-28-some_changes:refs/gt-fetch-head/06-28-some_changes
+2025-06-28T16:00:47.190Z: Finished fetchBranch (70379): git fetch --no-write-fetch-head --progress --no-tags -f origin refs/heads/06-28-some_changes:refs/gt-fetch-head/06-28-some_changes
+{
+  "code": 0,
+  "signal": null,
+  "stdout": "",
+  "stderr": "From github.com:ThoolooExpress/testing-push-hooks\n * [new branch]      06-28-some_changes -> refs/gt-fetch-head/06-28-some_changes\n"
+}
+2025-06-28T16:00:47.190Z: deduplicatedVersions: [
+  {
+    "headSha": "712e09c56e2e333a88b68cfcf912365decb3961d",
+    "baseSha": "fb5f9e6a41e278efe3749ebc7d390dfa7860178e",
+    "baseName": "master",
+    "createdAt": "2025-06-28T16:00:03.989Z",
+    "authorGithubHandle": "ThoolooExpress",
+    "isGraphiteGenerated": true
+  }
+]
+2025-06-28T16:00:47.196Z: Spawning getShaOrThrow (70384): git rev-parse refs/gt-fetch-head/06-28-some_changes
+2025-06-28T16:00:47.197Z: Finished getShaOrThrow (70384): git rev-parse refs/gt-fetch-head/06-28-some_changes
+{
+  "code": 0,
+  "signal": null,
+  "stdout": "712e09c56e2e333a88b68cfcf912365decb3961d\n",
+  "stderr": ""
+}
+2025-06-28T16:00:47.202Z: Spawning getMergeBase (70385): git merge-base --is-ancestor fb5f9e6a41e278efe3749ebc7d390dfa7860178e 712e09c56e2e333a88b68cfcf912365decb3961d
+2025-06-28T16:00:47.203Z: Finished getMergeBase (70385): git merge-base --is-ancestor fb5f9e6a41e278efe3749ebc7d390dfa7860178e 712e09c56e2e333a88b68cfcf912365decb3961d
+{
+  "code": 0,
+  "signal": null,
+  "stdout": "",
+  "stderr": ""
+}
+2025-06-28T16:00:47.203Z: remoteVersion: {
+  "versionNumber": 1,
+  "headSha": "712e09c56e2e333a88b68cfcf912365decb3961d",
+  "baseSha": "fb5f9e6a41e278efe3749ebc7d390dfa7860178e",
+  "baseName": "master",
+  "isGraphiteGenerated": true
+}
+2025-06-28T16:00:47.209Z: Spawning getShaOrThrow (70386): git rev-parse refs/gt-fetch-head/06-28-some_changes
+2025-06-28T16:00:47.209Z: Finished getShaOrThrow (70386): git rev-parse refs/gt-fetch-head/06-28-some_changes
+{
+  "code": 0,
+  "signal": null,
+  "stdout": "712e09c56e2e333a88b68cfcf912365decb3961d\n",
+  "stderr": ""
+}
+2025-06-28T16:00:47.214Z: Spawning isDiffEmpty (70387): git --no-pager diff --no-ext-diff --shortstat 06-28-some_changes fb5f9e6a41e278efe3749ebc7d390dfa7860178e --
+2025-06-28T16:00:47.219Z: Spawning isDiffEmpty (70388): git --no-pager diff --no-ext-diff --shortstat 06-28-yet_again_more_changes 712e09c56e2e333a88b68cfcf912365decb3961d --
+2025-06-28T16:00:47.219Z: Finished isDiffEmpty (70387): git --no-pager diff --no-ext-diff --shortstat 06-28-some_changes fb5f9e6a41e278efe3749ebc7d390dfa7860178e --
+{
+  "code": 0,
+  "signal": null,
+  "stdout": " 2 files changed, 20 deletions(-)\n",
+  "stderr": ""
+}
+2025-06-28T16:00:47.220Z: Finished isDiffEmpty (70388): git --no-pager diff --no-ext-diff --shortstat 06-28-yet_again_more_changes 712e09c56e2e333a88b68cfcf912365decb3961d --
+{
+  "code": 0,
+  "signal": null,
+  "stdout": " 1 file changed, 1 deletion(-)\n",
+  "stderr": ""
+}
+
+[94m✏️ Preparing to submit PRs for the following branches...[39m
+2025-06-28T16:00:47.224Z: Spawning getShaOrThrow (70389): git rev-parse refs/gt-fetch-head/06-28-some_changes
+2025-06-28T16:00:47.224Z: Finished getShaOrThrow (70389): git rev-parse refs/gt-fetch-head/06-28-some_changes
+{
+  "code": 0,
+  "signal": null,
+  "stdout": "712e09c56e2e333a88b68cfcf912365decb3961d\n",
+  "stderr": ""
+}
+▸ [2m06-28-some_changes[22m (No-op)
+▸ [36m06-28-yet_again_more_changes[39m (Create)
+2025-06-28T16:00:47.224Z: Generating PR title from commits for 06-28-yet_again_more_changes
+2025-06-28T16:00:47.227Z: Spawning getCommitRangeHashes (70390): git --no-pager log --pretty=format:%H 712e09c56e2e333a88b68cfcf912365decb3961d..6c204820bb02a5d0d2cc5b10047f9d0db821cea8 --
+2025-06-28T16:00:47.228Z: Finished getCommitRangeHashes (70390): git --no-pager log --pretty=format:%H 712e09c56e2e333a88b68cfcf912365decb3961d..6c204820bb02a5d0d2cc5b10047f9d0db821cea8 --
+{
+  "code": 0,
+  "signal": null,
+  "stdout": "6c204820bb02a5d0d2cc5b10047f9d0db821cea8",
+  "stderr": ""
+}
+2025-06-28T16:00:47.231Z: Spawning getCommitRangeFormatted (70391): git -c log.showSignature=false --no-pager log -1 --pretty=format:%s 6c204820bb02a5d0d2cc5b10047f9d0db821cea8 --
+2025-06-28T16:00:47.232Z: Finished getCommitRangeFormatted (70391): git -c log.showSignature=false --no-pager log -1 --pretty=format:%s 6c204820bb02a5d0d2cc5b10047f9d0db821cea8 --
+{
+  "code": 0,
+  "signal": null,
+  "stdout": "yet again, more changes",
+  "stderr": ""
+}
+2025-06-28T16:00:47.235Z: Spawning getCommitRangeHashes (70392): git --no-pager log --pretty=format:%H 712e09c56e2e333a88b68cfcf912365decb3961d..6c204820bb02a5d0d2cc5b10047f9d0db821cea8 --
+2025-06-28T16:00:47.236Z: Finished getCommitRangeHashes (70392): git --no-pager log --pretty=format:%H 712e09c56e2e333a88b68cfcf912365decb3961d..6c204820bb02a5d0d2cc5b10047f9d0db821cea8 --
+{
+  "code": 0,
+  "signal": null,
+  "stdout": "6c204820bb02a5d0d2cc5b10047f9d0db821cea8",
+  "stderr": ""
+}
+2025-06-28T16:00:47.240Z: Spawning getCommitRangeFormatted (70393): git -c log.showSignature=false --no-pager log -1 --pretty=format:%B%n 6c204820bb02a5d0d2cc5b10047f9d0db821cea8 --
+2025-06-28T16:00:47.241Z: Finished getCommitRangeFormatted (70393): git -c log.showSignature=false --no-pager log -1 --pretty=format:%B%n 6c204820bb02a5d0d2cc5b10047f9d0db821cea8 --
+{
+  "code": 0,
+  "signal": null,
+  "stdout": "yet again, more changes\n\n",
+  "stderr": ""
+}
+
+2025-06-28T16:00:47.247Z: Spawning getRemoteUrl (70394): git remote get-url origin --push
+2025-06-28T16:00:47.253Z: Spawning getRemoteUrl (70395): git remote get-url origin --push
+2025-06-28T16:00:47.253Z: Finished getRemoteUrl (70394): git remote get-url origin --push
+{
+  "code": 0,
+  "signal": null,
+  "stdout": "git@github.com:ThoolooExpress/testing-push-hooks.git\n",
+  "stderr": ""
+}
+2025-06-28T16:00:47.254Z: Finished getRemoteUrl (70395): git remote get-url origin --push
+{
+  "code": 0,
+  "signal": null,
+  "stdout": "git@github.com:ThoolooExpress/testing-push-hooks.git\n",
+  "stderr": ""
+}
+2025-06-28T16:00:47.254Z: Requesting: {
+  "apiServer": "https://api.graphite.dev/v1",
+  "route": {
+    "method": "POST",
+    "url": "/graphite/cli/submit/pre-submit-pull-requests",
+    "params": {},
+    "response": {}
+  },
+  "params": {
+    "repoOwner": "ThoolooExpress",
+    "repoName": "testing-push-hooks",
+    "branches": [
+      {
+        "headRefName": "06-28-yet_again_more_changes"
+      }
+    ]
+  }
+}
+2025-06-28T16:00:47.339Z: Debug headers: {
+  "x-graphite-request-id": "74448f3e-85fa-469d-a7a4-5a24468c1d93"
+}
+2025-06-28T16:00:47.339Z: Result: {
+  "result": {
+    "result": {
+      "retargetedPrs": []
+    },
+    "_response": {}
+  }
+}
+[94m🚀 Pushing branches to remote...[39m
+2025-06-28T16:00:47.345Z: Spawning getShaOrThrow (70396): git rev-parse refs/gt-fetch-head/06-28-yet_again_more_changes
+2025-06-28T16:00:47.346Z: Finished getShaOrThrow (70396): git rev-parse refs/gt-fetch-head/06-28-yet_again_more_changes
+{
+  "code": 128,
+  "signal": null,
+  "stdout": "refs/gt-fetch-head/06-28-yet_again_more_changes\n",
+  "stderr": "fatal: ambiguous argument 'refs/gt-fetch-head/06-28-yet_again_more_changes': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions, like this:\n'git <command> [<revision>...] -- [<file>...]'\n"
+}
+2025-06-28T16:00:47.346Z: Spawning git rev-parse refs/gt-fetch-head/06-28-yet_again_more_changes failed: Command failed with error exit code 128:
+git rev-parse refs/gt-fetch-head/06-28-yet_again_more_changes
+refs/gt-fetch-head/06-28-yet_again_more_changes
+
+fatal: ambiguous argument 'refs/gt-fetch-head/06-28-yet_again_more_changes': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+
+2025-06-28T16:00:47.354Z: Spawning inferRepoGitHubInfo (70397): git config --get core.hooksPath
+2025-06-28T16:00:47.355Z: Finished inferRepoGitHubInfo (70397): git config --get core.hooksPath
+{
+  "code": 1,
+  "signal": null,
+  "stdout": "",
+  "stderr": ""
+}
+2025-06-28T16:00:47.358Z: Spawning pushBranch (70398): git push -u origin --force-with-lease --progress 06-28-yet_again_more_changes --no-verify --atomic
+2025-06-28T16:00:47.994Z: Finished pushBranch (70398): git push -u origin --force-with-lease --progress 06-28-yet_again_more_changes --no-verify --atomic
+{
+  "code": 0,
+  "signal": null,
+  "stdout": "branch '06-28-yet_again_more_changes' set up to track 'origin/06-28-yet_again_more_changes'.\n",
+  "stderr": "Enumerating objects: 5, done.\nCounting objects:  20% (1/5)\rCounting objects:  40% (2/5)\rCounting objects:  60% (3/5)\rCounting objects:  80% (4/5)\rCounting objects: 100% (5/5)\rCounting objects: 100% (5/5), done.\nDelta compression using up to 24 threads\nCompressing objects:  33% (1/3)\rCompressing objects:  66% (2/3)\rCompressing objects: 100% (3/3)\rCompressing objects: 100% (3/3), done.\nWriting objects:  33% (1/3)\rWriting objects:  66% (2/3)\rWriting objects: 100% (3/3)\rWriting objects: 100% (3/3), 318 bytes | 318.00 KiB/s, done.\nTotal 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)\nremote: Resolving deltas:   0% (0/1)        \rremote: Resolving deltas: 100% (1/1)        \rremote: Resolving deltas: 100% (1/1), completed with 1 local object.        \nremote: \nremote: Create a pull request for '06-28-yet_again_more_changes' on GitHub by visiting:        \nremote:      https://github.com/ThoolooExpress/testing-push-hooks/pull/new/06-28-yet_again_more_changes        \nremote: \nTo github.com:ThoolooExpress/testing-push-hooks.git\n * [new branch]      06-28-yet_again_more_changes -> 06-28-yet_again_more_changes\n"
+}
+2025-06-28T16:00:48.000Z: Spawning createNewObject (70403): git hash-object -w --stdin
+2025-06-28T16:00:48.001Z: Finished createNewObject (70403): git hash-object -w --stdin
+{
+  "code": 0,
+  "signal": null,
+  "stdout": "1bbfd7343622e2c9d43a9342f6f33fcab9c4191a\n",
+  "stderr": ""
+}
+2025-06-28T16:00:48.006Z: Spawning updateRef (70404): git update-ref refs/branch-metadata/06-28-yet_again_more_changes 1bbfd7343622e2c9d43a9342f6f33fcab9c4191a
+2025-06-28T16:00:48.007Z: Finished updateRef (70404): git update-ref refs/branch-metadata/06-28-yet_again_more_changes 1bbfd7343622e2c9d43a9342f6f33fcab9c4191a
+{
+  "code": 0,
+  "signal": null,
+  "stdout": "",
+  "stderr": ""
+}
+2025-06-28T16:00:48.007Z: Updated cached meta for branch 06-28-yet_again_more_changes:
+{
+  "oldCachedMeta": {
+    "children": [],
+    "branchRevision": "6c204820bb02a5d0d2cc5b10047f9d0db821cea8",
+    "validationResult": "VALID",
+    "parentBranchName": "06-28-some_changes",
+    "parentBranchRevision": "712e09c56e2e333a88b68cfcf912365decb3961d"
+  },
+  "metadata": {
+    "children": [],
+    "branchRevision": "6c204820bb02a5d0d2cc5b10047f9d0db821cea8",
+    "validationResult": "VALID",
+    "parentBranchName": "06-28-some_changes",
+    "parentBranchRevision": "712e09c56e2e333a88b68cfcf912365decb3961d",
+    "lastSubmittedVersion": {
+      "headSha": "6c204820bb02a5d0d2cc5b10047f9d0db821cea8",
+      "baseSha": "712e09c56e2e333a88b68cfcf912365decb3961d",
+      "baseName": "06-28-some_changes"
+    }
+  }
+}
+
+[94m📨 Creating/updating PRs...[39m
+2025-06-28T16:00:48.013Z: Spawning getRemoteUrl (70405): git remote get-url origin --push
+2025-06-28T16:00:48.014Z: Finished getRemoteUrl (70405): git remote get-url origin --push
+{
+  "code": 0,
+  "signal": null,
+  "stdout": "git@github.com:ThoolooExpress/testing-push-hooks.git\n",
+  "stderr": ""
+}
+2025-06-28T16:00:48.018Z: Spawning getRemoteUrl (70406): git remote get-url origin --push
+2025-06-28T16:00:48.019Z: Finished getRemoteUrl (70406): git remote get-url origin --push
+{
+  "code": 0,
+  "signal": null,
+  "stdout": "git@github.com:ThoolooExpress/testing-push-hooks.git\n",
+  "stderr": ""
+}
+2025-06-28T16:00:48.019Z: Requesting: {
+  "apiServer": "https://api.graphite.dev/v1",
+  "route": {
+    "method": "POST",
+    "url": "/graphite/submit/pull-requests",
+    "params": {},
+    "response": {}
+  },
+  "params": {
+    "repoOwner": "ThoolooExpress",
+    "repoName": "testing-push-hooks",
+    "prs": [
+      {
+        "head": "06-28-yet_again_more_changes",
+        "headSha": "6c204820bb02a5d0d2cc5b10047f9d0db821cea8",
+        "base": "06-28-some_changes",
+        "baseSha": "712e09c56e2e333a88b68cfcf912365decb3961d",
+        "action": "create",
+        "title": "yet again, more changes",
+        "body": "",
+        "reviewers": [],
+        "draft": true
+      }
+    ],
+    "trunkBranchName": "master",
+    "gti": false,
+    "mergeWhenReady": false,
+    "rerequestReview": false,
+    "useWebSubmit": true,
+    "webSubmitAnalytics": {
+      "eligible": true,
+      "usedWebSubmit": true,
+      "prompted": false,
+      "suppressedPrompt": false,
+      "submitViaCliSetting": false
+    }
+  }
+}
+2025-06-28T16:00:49.314Z: Debug headers: {
+  "x-graphite-request-id": "45ecc7a4-baf6-4972-a998-6a3609877ca1"
+}
+2025-06-28T16:00:49.314Z: Result: {
+  "result": {
+    "prs": [
+      {
+        "base": "06-28-some_changes",
+        "baseSha": "712e09c56e2e333a88b68cfcf912365decb3961d",
+        "head": "06-28-yet_again_more_changes",
+        "headSha": "6c204820bb02a5d0d2cc5b10047f9d0db821cea8",
+        "prNumber": 9,
+        "prURL": "https://app.graphite.dev/github/pr/ThoolooExpress/testing-push-hooks/9",
+        "status": "created",
+        "repoName": "testing-push-hooks",
+        "repoOwner": "ThoolooExpress",
+        "githubId": "PR_kwDOO6t80s6ciSic"
+      }
+    ],
+    "_response": {}
+  }
+}
+[32m06-28-yet_again_more_changes[39m: [32mcreated[39m
+2025-06-28T16:00:49.321Z: Spawning getRemoteUrl (70407): git remote get-url origin --push
+2025-06-28T16:00:49.321Z: Finished getRemoteUrl (70407): git remote get-url origin --push
+{
+  "code": 0,
+  "signal": null,
+  "stdout": "git@github.com:ThoolooExpress/testing-push-hooks.git\n",
+  "stderr": ""
+}
+2025-06-28T16:00:49.326Z: Spawning getRemoteUrl (70408): git remote get-url origin --push
+2025-06-28T16:00:49.327Z: Finished getRemoteUrl (70408): git remote get-url origin --push
+{
+  "code": 0,
+  "signal": null,
+  "stdout": "git@github.com:ThoolooExpress/testing-push-hooks.git\n",
+  "stderr": ""
+}
+https://app.graphite.dev/submit/ThoolooExpress/testing-push-hooks/9
+2025-06-28T16:00:49.339Z: Spawning getRemoteUrl (70411): git remote get-url origin --push
+2025-06-28T16:00:49.340Z: Finished getRemoteUrl (70411): git remote get-url origin --push
+{
+  "code": 0,
+  "signal": null,
+  "stdout": "git@github.com:ThoolooExpress/testing-push-hooks.git\n",
+  "stderr": ""
+}
+2025-06-28T16:00:49.340Z: Requesting: {
+  "apiServer": "https://api.graphite.dev/v1",
+  "route": {
+    "method": "GET",
+    "url": "/graphite/cli-repo-message",
+    "queryParams": {},
+    "response": {}
+  },
+  "params": {},
+  "queryParams": {
+    "org": "ThoolooExpress",
+    "repo": "testing-push-hooks"
+  }
+}
+2025-06-28T16:00:49.435Z: Debug headers: {
+  "x-graphite-request-id": "70798fd4-4984-4b2e-9006-5faac0617e6b"
+}
+2025-06-28T16:00:49.435Z: Result: {
+  "result": {
+    "message": null,
+    "_response": {}
+  }
+}
+2025-06-28T16:00:49.435Z: Finished running handler
+2025-06-28T16:00:49.435Z: Persisting cache...
+2025-06-28T16:00:49.439Z: Spawning getBranchNamesAndRevisions (70433): git for-each-ref --format=%(refname:short):%(objectname) --sort=-committerdate refs/heads/
+2025-06-28T16:00:49.443Z: Spawning getShaForEachRefWithPrefix (70436): git for-each-ref --format=%(refname):%(objectname) refs/branch-metadata/
+2025-06-28T16:00:49.444Z: Finished getBranchNamesAndRevisions (70433): git for-each-ref --format=%(refname:short):%(objectname) --sort=-committerdate refs/heads/
+{
+  "code": 0,
+  "signal": null,
+  "stdout": "06-28-yet_again_more_changes:6c204820bb02a5d0d2cc5b10047f9d0db821cea8\n06-28-some_changes:712e09c56e2e333a88b68cfcf912365decb3961d\nmaster:fb5f9e6a41e278efe3749ebc7d390dfa7860178e\n06-28-even_more_changes:69c0550081f8ff93f1ccc3555a8ed3af2c71ac80\n06-15-part_2:4065526106f82e73213245cb8ce60dd48096ff33\n06-15-part_1:58bfb687c0a047c0899ba0fa2f796d079d42f551\n",
+  "stderr": ""
+}
+2025-06-28T16:00:49.444Z: Finished getShaForEachRefWithPrefix (70436): git for-each-ref --format=%(refname):%(objectname) refs/branch-metadata/
+{
+  "code": 0,
+  "signal": null,
+  "stdout": "refs/branch-metadata/06-15-part_1:9475366adc4a15b1820262cdb77a6d7c1cd679f5\nrefs/branch-metadata/06-15-part_2:2b0a9ad586ed408d83db6c8b6d0046e2fa1779fc\nrefs/branch-metadata/06-28-even_more_changes:a0efd946404e211b24bc6bbcca2edaefd2b3f3a8\nrefs/branch-metadata/06-28-some_changes:c619a05d99c292debb398658fcbd3e6b82c0331f\nrefs/branch-metadata/06-28-yet_again_more_changes:1bbfd7343622e2c9d43a9342f6f33fcab9c4191a\n",
+  "stderr": ""
+}
+2025-06-28T16:00:49.445Z: Flushing trace...
+2025-06-28T16:00:49.445Z: Sent trace to child...
+2025-06-28T16:00:49.446Z: Child disconnected
